@@ -19,7 +19,7 @@ console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000'];
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000' , 'https://skilled-verse.netlify.app'];
 const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
