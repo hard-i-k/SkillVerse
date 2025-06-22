@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f8fafc;
+  --color-bg-secondary: #fff;
+  --color-text: #18181b;
+  --color-border: #e5e7eb;
+  --color-accent: #7c3aed;
+  --color-accent2: #f472b6;
+  --color-card: #f3f4f6;
+  --color-toolbar: #f1f5f9;
+  --color-toolbar-icon: #7c3aed;
+  --color-toolbar-icon-active: #18181b;
+  --color-toolbar-border: #e5e7eb;
+}
+
+.dark {
+  --color-bg: #18181b;
+  --color-bg-secondary: #232336;
+  --color-text: #f3f4f6;
+  --color-border: #27272a;
+  --color-accent: #a78bfa;
+  --color-accent2: #f472b6;
+  --color-card: #232336;
+  --color-toolbar: #232336;
+  --color-toolbar-icon: #a78bfa;
+  --color-toolbar-icon-active: #f3f4f6;
+  --color-toolbar-border: #27272a;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen;
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: background 0.3s, color 0.3s;
+  }
+}
+
+/* ReactQuill theme overrides for toolbar and content */
+.ql-toolbar {
+  background: var(--color-toolbar) !important;
+  border: 1px solid var(--color-toolbar-border) !important;
+  border-radius: 1rem 1rem 0 0 !important;
+  color: var(--color-toolbar-icon) !important;
+  transition: background 0.3s, color 0.3s;
+}
+.ql-toolbar .ql-stroke {
+  stroke: var(--color-toolbar-icon) !important;
+}
+.ql-toolbar .ql-fill {
+  fill: var(--color-toolbar-icon) !important;
+}
+.ql-toolbar .ql-picker {
+  color: var(--color-toolbar-icon) !important;
+}
+.ql-toolbar button:hover, .ql-toolbar button.ql-active {
+  color: var(--color-toolbar-icon-active) !important;
+  background: var(--color-accent2) !important;
+}
+.ql-toolbar .ql-picker-label.ql-active, .ql-toolbar .ql-picker-label:hover {
+  color: var(--color-toolbar-icon-active) !important;
+}
+.ql-toolbar .ql-picker-options {
+  background: var(--color-toolbar) !important;
+  color: var(--color-toolbar-icon) !important;
+}
+.ql-container {
+  background: var(--color-bg-secondary) !important;
+  border: 1px solid var(--color-toolbar-border) !important;
+  border-radius: 0 0 1rem 1rem !important;
+  color: var(--color-text) !important;
+  min-height: 200px;
+  font-size: 1.1rem;
+  transition: background 0.3s, color 0.3s;
+}
+.ql-editor {
+  color: var(--color-text) !important;
+  background: transparent !important;
+  min-height: 180px;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+} 
