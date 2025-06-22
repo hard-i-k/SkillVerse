@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { createBlog } from '../../utils/api';
-import { AuthContext } from '../../context/Authcontext';
+import { AuthContext } from '../../context/AuthContext';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Button } from '../../components/ui/button';
