@@ -168,7 +168,7 @@ const ChapterAccordion = ({ chapter, index, isCompleted, isCreator, onMarkComple
                         PDF Content
                       </h4>
                       <div className="border rounded-xl overflow-hidden shadow-lg">
-                        <PdfViewer url={pdfSrc} />
+                        <PDFViewer url={pdfSrc} />
                       </div>
                     </div>
                   )}
