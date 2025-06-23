@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import api from '../../utils/api';
 import { motion, AnimatePresence } from 'framer-motion';
-import PDFViewer from "../../components/PDFViewer";;
+import PDFViewer from "../components/PDFViewer";;
 import { FiStar, FiArrowLeft, FiChevronDown, FiChevronRight, FiPlay, FiFileText, FiCheck, FiClock, FiEye } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import { useTheme } from '../../context/ThemeContext';
