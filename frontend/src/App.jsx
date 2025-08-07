@@ -53,14 +53,30 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
-          <Route path="/courses" element={<BrowseCourses />} />
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/profile/:userId" element={<UserProfile />} />
-
-          {/* Blog Routes */}
-          <Route path="/blogform" element={<CreateBlog />} />
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/blogs/:id" element={<ViewBlog />} />
+
+          {/* Protected Routes - Browse Courses */}
+          <Route
+            path="/courses"
+            element={
+              <ProtectedRoute>
+                <BrowseCourses />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Protected Routes - Blog Form */}
+          <Route
+            path="/blogform"
+            element={
+              <ProtectedRoute>
+                <CreateBlog />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Protected Routes */}
           <Route
