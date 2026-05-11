@@ -87,7 +87,7 @@ FROM_EMAIL=noreply@skillverse.com
 FRONTEND_URL=https://your-app-name.netlify.app
 ```
 
-### 🚀 Deployment
+###  Deployment
 
 When deploying to a service like Netlify (frontend) and Heroku/Render (backend), make sure to set the environment variables in the respective service's dashboard.
 
@@ -95,7 +95,7 @@ When deploying to a service like Netlify (frontend) and Heroku/Render (backend),
 
 ---
 
-Happy coding! 🚀
+Happy coding! 
 
 ## Available Scripts
 
